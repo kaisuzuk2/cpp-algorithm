@@ -4,14 +4,16 @@ using namespace std;
 void bubble_sort(int *arr, int size)
 {
     int i;
+    int sorted;
     int flg;
 
     flg = 1;
+    sorted = 0;
     while (flg)
     {
         i = size - 1;
         flg = 0;
-        while (i >= 1)
+        while (i >= (sorted + 1))
         {
             if (arr[i - 1] > arr[i])
             {
@@ -20,6 +22,7 @@ void bubble_sort(int *arr, int size)
             }
             i--;
         }
+        sorted++;
     }
 }
 
